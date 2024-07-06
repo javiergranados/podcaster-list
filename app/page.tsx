@@ -1,4 +1,4 @@
-import { Button } from '@ui/button'
+import { TinyTile } from '@ui/tinyTile'
 import { Podcast } from '@lib/definitions'
 
 async function getData() {
@@ -15,12 +15,14 @@ async function getData() {
 
 export default async function HomePage() {
   const podcasts: Podcast[] = await getData()
-  console.log('🚀 ~ HomePage ~ podcasts:', podcasts)
 
   return (
-    <main className="flex h-full flex-col items-center pb-5 pt-5">
-      <h1 className="color text-2xl font-semibold text-primary">Podcaster List</h1>
-      <Button />
+    <main className="flex h-full flex-col items-center p-4">
+      <div className="grid w-5/6 grid-cols-1 gap-6 overflow-y-auto overflow-x-hidden py-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {podcasts.map((podcast, index) => (
+          <TinyTile key={index} podcast={podcast} />
+        ))}
+      </div>
     </main>
   )
 }
