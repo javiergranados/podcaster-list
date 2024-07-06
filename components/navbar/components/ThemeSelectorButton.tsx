@@ -1,14 +1,10 @@
 'use client'
 
 import clsx from 'clsx'
-import { useState } from 'react'
+import { useTheme } from '@hooks/useTheme'
 
 export function ThemeSelectorButton() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light')
-
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light')
-  }
+  const { theme, toggleTheme } = useTheme()
 
   return (
     <div className="btn btn-circle text-primary dark:bg-primary dark:text-neutral" onClick={toggleTheme}>

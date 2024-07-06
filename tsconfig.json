@@ -19,7 +19,8 @@
     ],
     "paths": {
       "@/*": ["./app/*"],
-      "@ui/*": ["./components/*"]
+      "@ui/*": ["./components/*"],
+      "@hooks/*": ["./hooks/*"]
     },
 
     /* Linting */
