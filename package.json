@@ -8,7 +8,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier -c app --write --ignore-unknown"
+    "prettier": "prettier -c app --write --ignore-unknown",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": "eslint --fix --max-warnings 0",
+    "*": "prettier -c app --write --ignore-unknown"
   },
   "dependencies": {
     "next": "14.2.4",
@@ -24,6 +29,8 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.4",
     "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
     "postcss": "^8",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
