@@ -20,7 +20,8 @@
     "paths": {
       "@/*": ["./app/*"],
       "@ui/*": ["./components/*"],
-      "@hooks/*": ["./hooks/*"]
+      "@hooks/*": ["./hooks/*"],
+      "@lib/*": ["./lib/*"]
     },
 
     /* Linting */
