@@ -16,6 +16,7 @@
     "*": "prettier -c app --write --ignore-unknown"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18"

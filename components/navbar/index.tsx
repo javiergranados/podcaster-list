@@ -1,0 +1,17 @@
+import Link from 'next/link'
+import { ThemeSelectorButton } from './components/ThemeSelectorButton'
+
+export function Navbar() {
+  return (
+    <header className="navbar z-10 h-16 bg-base-100 dark:bg-primary">
+      <div className="flex-1" data-testid="spotahome-logo">
+        <Link className="btn btn-link text-xl normal-case text-primary dark:text-neutral" href="/">
+          Podcaster
+        </Link>
+      </div>
+      <div className="flex-none gap-4">
+        <ThemeSelectorButton />
+      </div>
+    </header>
+  )
+}
