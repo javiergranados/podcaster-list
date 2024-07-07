@@ -1,6 +1,6 @@
 import { Suspense } from 'react'
-import PodcastList from '@ui/podcastList'
-import PodcastListSkeleton from '@skeletons/podcastListSkeleton'
+import { PodcastList } from '@ui/podcastList'
+import { PodcastListSkeleton } from '@skeletons/podcastListSkeleton'
 
 type HomePageProps = {
   searchParams?: {

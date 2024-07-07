@@ -1,4 +1,4 @@
-export default function TinyTileSkeleton() {
+export function TinyTileSkeleton() {
   return (
     <div className="relative mt-6 h-36 w-80 cursor-pointer bg-base-100 shadow-md transition-all hover:scale-105 hover:shadow-lg dark:bg-neutral">
       <div className="skeleton absolute -top-8 left-1/2 h-24 w-24 -translate-x-1/2 rounded-full"></div>

@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { Podcast } from '@lib/definitions'
 
 type Props = {
@@ -6,13 +9,23 @@ type Props = {
 }
 
 export function TinyTile({ podcast }: Props) {
+  const router = useRouter()
+
   const imagesOrdered = podcast['im:image'].sort(
     (a, b) => parseInt(b.attributes.height, 10) - parseInt(a.attributes.height, 10)
   )
   const image = imagesOrdered[0].label
 
+  const handleClick = () => {
+    const id = podcast.id.attributes['im:id']
+    router.push(`/podcast/${id}`)
+  }
+
   return (
-    <div className="relative mt-6 h-36 w-80 cursor-pointer bg-base-100 shadow-md transition-all hover:scale-105 hover:shadow-lg dark:bg-neutral">
+    <div
+      onClick={handleClick}
+      className="relative mt-6 h-36 w-80 cursor-pointer bg-base-100 shadow-md transition-all hover:scale-105 hover:shadow-lg dark:bg-neutral"
+    >
       <Image
         width={100}
         height={100}

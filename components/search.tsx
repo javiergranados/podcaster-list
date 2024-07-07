@@ -8,7 +8,7 @@ type SearchProps = {
   numberOfPodcasts: number
 }
 
-export default function Search({ numberOfPodcasts }: SearchProps) {
+export function Search({ numberOfPodcasts }: SearchProps) {
   const inputRef = useRef<HTMLInputElement>(null)
 
   const searchParams = useSearchParams()

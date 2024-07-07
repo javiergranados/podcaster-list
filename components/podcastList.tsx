@@ -1,12 +1,12 @@
 import { fetchPodcastList } from '@lib/data'
-import Search from './search'
+import { Search } from './search'
 import { TinyTile } from './tinyTile'
 
 type PodcastListProps = {
   query: string
 }
 
-export default async function PodcastList({ query }: PodcastListProps) {
+export async function PodcastList({ query }: PodcastListProps) {
   const podcasts = await fetchPodcastList(query)
 
   return (
