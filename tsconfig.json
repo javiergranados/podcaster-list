@@ -20,6 +20,7 @@
     "paths": {
       "@/*": ["./app/*"],
       "@ui/*": ["./components/*"],
+      "@skeletons/*": ["./skeletons/*"],
       "@hooks/*": ["./hooks/*"],
       "@lib/*": ["./lib/*"]
     },
