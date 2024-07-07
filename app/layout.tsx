@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   description: 'List of the 100 most popular podcasters on Apple Podcasts',
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+type RootLayoutProps = Readonly<{
   children: React.ReactNode
-}>) {
+}>
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" data-theme="pastel">
       <body className={inter.className}>
