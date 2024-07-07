@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" data-theme="pastel">
       <body className={inter.className}>
         <Navbar />
-        <main role="main" className="h-[calc(100vh-9rem)] overflow-auto bg-base-100 p-2 dark:bg-indigo-100">
+        <main role="main" className="h-[calc(100vh-9rem)] overflow-auto bg-base-100 p-2">
           {children}
         </main>
         <Footer />

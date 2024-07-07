@@ -13,7 +13,7 @@ export function TinyTile({ podcast }: Props) {
   const image = imagesOrdered[0].label
 
   return (
-    <div className="relative mt-6 h-36 w-80 cursor-pointer bg-base-100 shadow-md transition-all hover:scale-105 hover:shadow-lg">
+    <div className="relative mt-6 h-36 w-80 cursor-pointer bg-base-100 shadow-md transition-all hover:scale-105 hover:shadow-lg dark:bg-neutral">
       <Image
         width={100}
         height={100}

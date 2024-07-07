@@ -1,10 +1,10 @@
 export function Footer() {
   return (
-    <footer className="footer h-20 w-screen bg-primary p-4 text-primary-content dark:bg-neutral dark:text-neutral-content">
+    <footer className="footer h-20 w-screen bg-primary p-4 text-primary-content transition-all dark:bg-neutral dark:text-neutral-content">
       <div className="flex w-full items-center justify-between">
         <p className="text-xs dark:opacity-50 sm:text-base">© {new Date().getFullYear()} Javier Granados</p>
         <a
-          className="btn btn-link text-primary-content hover:opacity-50 dark:text-neutral-content dark:opacity-50 dark:hover:text-primary"
+          className="btn btn-link text-primary-content hover:opacity-50 dark:text-neutral-content dark:opacity-50 dark:hover:opacity-100"
           href="mailto:hola@javiergranados.dev"
         >
           <svg className="h-8 w-8" viewBox="0 0 20 18">

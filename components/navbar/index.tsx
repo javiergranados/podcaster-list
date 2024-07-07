@@ -3,10 +3,10 @@ import { ThemeSelectorButton } from './components/ThemeSelectorButton'
 
 export function Navbar() {
   return (
-    <header className="navbar z-10 h-16 border-b border-gray-400 bg-base-100 dark:bg-primary">
+    <header className="navbar z-10 h-16 border-b border-primary-content bg-base-100 transition-all dark:border-primary">
       <div className="flex-1" data-testid="spotahome-logo">
         <Link
-          className="btn btn-link text-xl normal-case text-primary hover:text-primary-content dark:text-neutral"
+          className="btn btn-link text-xl normal-case text-primary hover:text-primary-content dark:text-primary dark:hover:text-neutral"
           href="/"
         >
           Podcaster
