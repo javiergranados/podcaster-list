@@ -1,6 +1,7 @@
 'use client'
 
 import clsx from 'clsx'
+import React from 'react'
 import { useTheme } from '@hooks/useTheme'
 
 export function ThemeSelectorButton() {

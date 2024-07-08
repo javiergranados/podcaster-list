@@ -1,3 +1,5 @@
+import React from 'react'
+
 export function Footer() {
   return (
     <footer className="footer h-20 w-screen bg-primary p-4 text-primary-content transition-all dark:bg-neutral dark:text-neutral-content">

@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
+import React from 'react'
 import { ThemeSelectorButton } from './components/ThemeSelectorButton'
 
 export function Navbar() {
@@ -14,7 +15,7 @@ export function Navbar() {
           className="btn btn-link text-xl normal-case text-primary hover:text-primary-content dark:text-primary dark:hover:text-neutral"
           href={{
             pathname: '/',
-            query: { query: searchParams.get('query')?.toString() },
+            query: { query: searchParams?.get('query')?.toString() },
           }}
         >
           Podcaster
