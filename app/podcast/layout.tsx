@@ -12,7 +12,9 @@ type LayoutProps = Readonly<{
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <main className="flex h-full flex-col items-center p-4">
-      <div className="flex w-full flex-col items-center overflow-x-hidden md:flex-row md:items-start">{children}</div>
+      <div className="flex h-full w-full flex-col items-center overflow-x-hidden md:flex-row md:items-start">
+        {children}
+      </div>
     </main>
   )
 }
