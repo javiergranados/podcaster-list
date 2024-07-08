@@ -10,7 +10,7 @@ type TileProps = {
 
 export function Tile({ metadata, description }: TileProps) {
   return (
-    <div className="relative top-0 mt-6 flex h-96 max-w-72 flex-col items-start bg-base-100 p-4 shadow-md transition-all dark:bg-neutral md:sticky">
+    <div className="relative top-0 mt-6 flex min-h-96 max-w-72 flex-col items-start bg-base-100 p-4 shadow-md transition-all dark:bg-neutral md:sticky">
       <Image width={170} height={170} src={metadata.artworkUrl100} alt="img" className="self-center rounded-md" />
       <div className="divider my-4"></div>
       <h2 className="line-clamp-1 text-base font-semibold">{metadata.collectionName}</h2>

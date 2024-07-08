@@ -1,19 +1,17 @@
 import { Suspense } from 'react'
-import { PodcastDetails } from '@ui/podcastDetails'
+import { Podcast } from '@pages/podcast'
 import { PodcastDetailsSkeleton } from '@skeletons/podcastDetailsSkeleton'
 
-type PodcastIdPageProps = {
+type PodcastPageProps = {
   params: {
     podcastId: string
   }
 }
 
-export default function PodcastIdPage({ params }: PodcastIdPageProps) {
+export default function PodcastPage({ params }: PodcastPageProps) {
   return (
-    <main className="flex h-full flex-col items-center p-4">
-      <Suspense fallback={<PodcastDetailsSkeleton />}>
-        <PodcastDetails podcastId={params.podcastId} />
-      </Suspense>
-    </main>
+    <Suspense fallback={<PodcastDetailsSkeleton />}>
+      <Podcast podcastId={params.podcastId} />
+    </Suspense>
   )
 }

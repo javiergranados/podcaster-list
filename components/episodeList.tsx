@@ -3,11 +3,12 @@ import { Episode } from '@lib/definitions'
 import { formatMilliseconds } from '@lib/utils'
 
 type EpisodeListProps = {
+  podcastId: string
   resultCount: number
   episodes: Episode[]
 }
 
-export async function EpisodeList({ resultCount, episodes }: EpisodeListProps) {
+export async function EpisodeList({ podcastId, resultCount, episodes }: EpisodeListProps) {
   return (
     <div className="mt-12 w-full list-none p-0 md:mt-4 md:p-8 md:pl-16 md:pt-0">
       <div className="mb-8 bg-base-100 p-4 text-xl font-bold shadow-lg dark:bg-neutral">Episodes: {resultCount}</div>
@@ -26,7 +27,7 @@ export async function EpisodeList({ resultCount, episodes }: EpisodeListProps) {
                 <td>
                   <Link
                     className="link text-blue-700 hover:opacity-70 dark:text-blue-400 dark:hover:opacity-50"
-                    href="/"
+                    href={`/podcast/${podcastId}/episode/${episode.trackId}`}
                   >
                     {episode.trackName}
                   </Link>

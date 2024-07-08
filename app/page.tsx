@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import { PodcastList } from '@ui/podcastList'
+import { Home } from '@pages/home'
 import { PodcastListSkeleton } from '@skeletons/podcastListSkeleton'
 
 type HomePageProps = {
@@ -14,7 +14,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
   return (
     <main className="flex h-full flex-col items-center p-4">
       <Suspense fallback={<PodcastListSkeleton />}>
-        <PodcastList query={query} />
+        <Home query={query} />
       </Suspense>
     </main>
   )
