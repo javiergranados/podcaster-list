@@ -2,12 +2,12 @@ import Link from 'next/link'
 import { Episode } from '@lib/definitions'
 import { formatMilliseconds } from '@lib/utils'
 
-type PodcastListProps = {
+type EpisodeListProps = {
   resultCount: number
   episodes: Episode[]
 }
 
-export async function EpisodeList({ resultCount, episodes }: PodcastListProps) {
+export async function EpisodeList({ resultCount, episodes }: EpisodeListProps) {
   return (
     <div className="mt-12 w-full list-none p-0 md:mt-4 md:p-8 md:pl-16 md:pt-0">
       <div className="mb-8 bg-base-100 p-4 text-xl font-bold shadow-lg dark:bg-neutral">Episodes: {resultCount}</div>
@@ -15,9 +15,9 @@ export async function EpisodeList({ resultCount, episodes }: PodcastListProps) {
         <table className="table md:table-pin-rows">
           <thead>
             <tr>
-              <th className="w-3/4 text-base dark:text-neutral-content">Title</th>
-              <th className="text-base dark:text-neutral-content">Date</th>
-              <th className="text-end text-base dark:text-neutral-content">Duration</th>
+              <th className="w-3/4 text-base dark:bg-neutral dark:text-neutral-content">Title</th>
+              <th className="text-base dark:bg-neutral dark:text-neutral-content">Date</th>
+              <th className="text-end text-base dark:bg-neutral dark:text-neutral-content">Duration</th>
             </tr>
           </thead>
           <tbody>

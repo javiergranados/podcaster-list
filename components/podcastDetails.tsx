@@ -2,11 +2,11 @@ import { fetchPodcastById, fetchPodcastDetails } from '@lib/data'
 import { EpisodeList } from './episodeList'
 import { Tile } from './tile'
 
-type PodcastListProps = {
+type PodcastDetailsProps = {
   podcastId: string
 }
 
-export async function PodcastDetails({ podcastId }: PodcastListProps) {
+export async function PodcastDetails({ podcastId }: PodcastDetailsProps) {
   const podcast = await fetchPodcastById(podcastId)
   const podcastDetails = await fetchPodcastDetails(podcastId)
 
