@@ -125,7 +125,7 @@ export interface Episode {
   shortDescription: string
   trackId: number
   trackName: string
-  releaseDate: Date
+  releaseDate: string
   artistIds: number[]
   feedUrl: string
   artworkUrl600: string
