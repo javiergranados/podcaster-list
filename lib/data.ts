@@ -45,5 +45,10 @@ export async function fetchPodcastDetails(podcastId: string) {
   }
 
   const podcastDetails = await res.json()
-  return podcastDetails as PodcastDetails
+
+  return {
+    resultCount: podcastDetails.resultCount,
+    metadata: podcastDetails.results[0],
+    episodes: podcastDetails.results.slice(1),
+  } as PodcastDetails
 }

@@ -1,3 +1,5 @@
+// PODCAST LIST
+
 interface Base {
   label: string
 }
@@ -70,60 +72,76 @@ export interface Podcast {
   'im:releaseDate': ReleaseDate
 }
 
-export interface PodcastDetails {
-  resultCount: number
-  results: Episode[]
-}
+// PODCAST DETAILS
 
-export interface Episode {
-  wrapperType: {
-    PodcastEpisode: string
-    Track: string
-  }
-  kind: {
-    Podcast: string
-    PodcastEpisode: string
-  }
-  artistId?: number
+export interface PodcastMetadata {
+  wrapperType: string
+  kind: string
+  artistId: number
   collectionId: number
   trackId: number
-  artistName?: string
+  artistName: string
   collectionName: string
   trackName: string
-  collectionCensoredName?: string
-  trackCensoredName?: string
+  collectionCensoredName: string
+  trackCensoredName: string
   artistViewUrl: string
   collectionViewUrl: string
   feedUrl: string
   trackViewUrl: string
-  artworkUrl30?: string
+  artworkUrl30: string
   artworkUrl60: string
-  artworkUrl100?: string
-  collectionPrice?: number
-  trackPrice?: number
-  collectionHdPrice?: number
+  artworkUrl100: string
+  collectionPrice: number
+  trackPrice: number
+  collectionHdPrice: number
   releaseDate: Date
-  collectionExplicitness?: string
-  trackExplicitness?: string
-  trackCount?: number
+  collectionExplicitness: string
+  trackExplicitness: string
+  trackCount: number
   trackTimeMillis: number
   country: string
-  currency?: string
-  primaryGenreName?: string
+  currency: string
+  primaryGenreName: string
   artworkUrl600: string
-  genreIds?: string[]
-  genres: Array<{
+  genreIds: string[]
+  genres: string[]
+}
+
+export interface Episode {
+  trackViewUrl: string
+  artworkUrl60: string
+  artistViewUrl: string
+  previewUrl: string
+  closedCaptioning: string
+  collectionId: number
+  collectionName: string
+  genres: {
     name: string
     id: string
-  }>
-  episodeUrl?: string
-  description?: string
-  shortDescription?: string
-  closedCaptioning?: string
-  artworkUrl160?: string
-  episodeFileExtension?: string
-  episodeContentType?: string
-  artistIds?: number[]
-  previewUrl?: string
-  episodeGuid?: string
+  }[]
+  episodeGuid: string
+  description: string
+  shortDescription: string
+  trackId: number
+  trackName: string
+  releaseDate: Date
+  artistIds: number[]
+  feedUrl: string
+  artworkUrl600: string
+  collectionViewUrl: string
+  trackTimeMillis: number
+  episodeFileExtension: string
+  episodeUrl: string
+  artworkUrl160: string
+  episodeContentType: string
+  country: string
+  kind: string
+  wrapperType: string
+}
+
+export interface PodcastDetails {
+  resultCount: number
+  metadata: PodcastMetadata
+  episodes: Episode[]
 }
