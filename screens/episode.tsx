@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation'
 import { EpisodeDetails } from '@ui/episodeDetails'
 import { Tile } from '@ui/tile'
 import { fetchPodcastById, fetchPodcastDetails } from '@lib/data'
@@ -14,8 +15,7 @@ export async function Episode({ podcastId, episodeId }: EpisodeProps) {
   const episode = podcastDetails.episodes.find((episode) => episode.trackId === parseInt(episodeId))
 
   if (!episode) {
-    // TODO: redirect to 404
-    return <div>Episode not found</div>
+    return notFound()
   }
   return (
     <>
