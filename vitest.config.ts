@@ -11,6 +11,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@/': new URL('./app/', import.meta.url).pathname,
+      '@screens': new URL('./screens/', import.meta.url).pathname,
       '@ui': new URL('./components/', import.meta.url).pathname,
       '@skeletons': new URL('./skeletons/', import.meta.url).pathname,
       '@lib': new URL('./lib/', import.meta.url).pathname,

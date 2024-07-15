@@ -1,6 +1,6 @@
 import { Suspense } from 'react'
-import { Home } from '@pages/home'
 import { PodcastListSkeleton } from '@skeletons/podcastListSkeleton'
+import { Home } from '../screens/home'
 
 type HomePageProps = {
   searchParams?: {

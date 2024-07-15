@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import { Episode } from '@pages/episode'
+import { Episode } from '../../../../../screens/episode'
 
 type EpisodePageProps = {
   params: {

@@ -19,7 +19,7 @@
     ],
     "paths": {
       "@/*": ["./app/*"],
-      "@pages/*": ["./pages/*"],
+      "@screens/*": ["./screens/*"],
       "@ui/*": ["./components/*"],
       "@skeletons/*": ["./skeletons/*"],
       "@hooks/*": ["./hooks/*"],

@@ -7,7 +7,7 @@
   "bracketSpacing": true,
   "importOrder": [
     "^@/(.*)$",
-    "^@pages/(.*)$",
+    "^@screens/(.*)$",
     "^@ui/(.*)$",
     "^@skeletons/(.*)$",
     "^@hooks/(.*)$",
