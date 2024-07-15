@@ -25,7 +25,6 @@
       "@hooks/*": ["./hooks/*"],
       "@lib/*": ["./lib/*"]
     },
-
     /* Linting */
     "strict": true,
     "strictNullChecks": true,

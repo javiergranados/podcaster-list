@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Suspense } from 'react'
 import { Footer } from '@ui/footer'
 import { Navbar } from '@ui/navbar'
 import './globals.css'
@@ -19,7 +20,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" data-theme="pastel">
       <body className={inter.className}>
-        <Navbar />
+        <Suspense>
+          <Navbar />
+        </Suspense>
         <main role="main" className="h-[calc(100vh-9rem)] overflow-auto bg-base-100 p-2">
           {children}
         </main>

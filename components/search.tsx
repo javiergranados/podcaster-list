@@ -16,7 +16,7 @@ export function Search({ numberOfPodcasts }: SearchProps) {
   const router = useRouter()
 
   const handleSearch = useDebouncedCallback((value) => {
-    const params = new URLSearchParams(searchParams)
+    const params = new URLSearchParams(searchParams ?? '')
 
     if (value) {
       params.set('query', value)
