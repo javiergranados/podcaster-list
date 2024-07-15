@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
-import { Episode } from '../../../../../screens/episode'
+import { Episode } from '@screens/episode'
+import { EpisodeDetailsSkeleton } from '@skeletons/episodeDetailsSkeleton'
 
 type EpisodePageProps = {
   params: {
@@ -10,7 +11,7 @@ type EpisodePageProps = {
 
 export default function EpisodePage({ params }: EpisodePageProps) {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<EpisodeDetailsSkeleton />}>
       <Episode {...params} />
     </Suspense>
   )

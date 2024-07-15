@@ -1,6 +1,6 @@
 import { Suspense } from 'react'
+import { Podcast } from '@screens/podcast'
 import { PodcastDetailsSkeleton } from '@skeletons/podcastDetailsSkeleton'
-import { Podcast } from '../../../screens/podcast'
 
 type PodcastPageProps = {
   params: {
