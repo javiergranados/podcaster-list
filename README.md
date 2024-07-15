@@ -1,6 +1,6 @@
 # Podcaster List
 
-An application to listen musical podcasts from a list of the most popular podcasts according to iTunes.
+> An application to listen musical podcasts from a list of the most popular podcasts according to iTunes.
 
 - Search for podcasts by title or artist
 - View podcast details
@@ -26,6 +26,15 @@ An application to listen musical podcasts from a list of the most popular podcas
 - [Husky](https://typicode.github.io/husky/) (v9.0)
 - [Lint-staged](https://github.com/okonet/lint-staged) (v15.2)
 
+The project implements **ESLint** and **Prettier**, which options are configured in the file _.eslintrc.cjs_ and _.prettierrc_.
+
+Rulesets:
+
+```
+'plugin:@typescript-eslint/recommended'
+'next/core-web-vitals'
+```
+
 ## Project Setup
 
 Install dependencies
@@ -40,7 +49,11 @@ Run the server and open the app in the browser
 pnpm dev
 ```
 
-> Navigate to [localhost](http://localhost:3000)
+> Navigate to [localhost](http://localhost:3000/) to see the app.
+
+### Demo
+
+If you prefer you can also check out the [demo](https://podcaster-list.vercel.app/) of the app.
 
 ### Testing
 
